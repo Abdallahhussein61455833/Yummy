@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yummy</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body class="">
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+    <div class="side-nav-menu bg-black min-vh-100 position-fixed d-flex top-0">
+      <div
+        class="text-white nav-tab d-flex flex-column justify-content-between min-vh-100 p-4"
+      >
+        <div class="links">
+          <ul class="list-unstyled overflow-hidden">
+            <li
+              onclick="showSearchInputs(); closeSideNav()"
+              class="side-nav-link py-2 position-relative"
+            >
+              Search
+            </li>
+            <li
+              onclick="getCategories(); closeSideNav()"
+              class="side-nav-link py-2 position-relative"
+            >
+              Categories
+            </li>
+            <li
+              onclick="getArea(); closeSideNav()"
+              class="side-nav-link py-2 position-relative"
+            >
+              Area
+            </li>
+            <li
+              onclick="getIngredients(); closeSideNav()"
+              class="side-nav-link py-2 position-relative"
+            >
+              Ingredients
+            </li>
+            <li
+              onclick="showContacts(); closeSideNav()"
+              class="side-nav-link py-2 position-relative"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright Â© 2019 All Rights <br />Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+      >
+        <img class="logo" src="images/logo.png" alt="logo" />
+        <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container w-75" id="searchContainer"></div>
+    <section class="home container p-5">
+      <div id="gallery" class="row"></div>
+    </section>
+
+    <section class="meal-details container p-5 custom-col">
+      <div id="details" class="row"></div>
+    </section>
+
+    <section class="contacts container">
+      <div id="contact"></div>
+    </section>
+
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
